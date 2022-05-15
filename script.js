@@ -1,8 +1,3 @@
-//functions
-//1.creatingchart
-//2.getting data for continent
-//3.getting data for country
-
 function createChart(countriesArray, statistics, status) {
   const canvasElement = document.getElementById("myChart");
   const config = {
@@ -109,20 +104,58 @@ async function getStatsForCountry(countryCode, status) {
 
 asiaBtn.addEventListener("click", function () {
   getData("asia", "confirmed");
-  confirmedBtn.classList.toggle("active");
-  // deathBtn.classList.toggle("active");
-  // recoveredBtn.classList.toggle("active");
-  // criticalBtn.classList.toggle("active");
+
+  deathBtn.addEventListener("click", function () {
+    getData("asia", "deaths");
+  });
+  recoveredBtn.addEventListener("click", function () {
+    getData("asia", "recovered");
+  });
+  criticalBtn.addEventListener("click", function () {
+    getData("asia", "critical");
+  });
 });
+
 europeBtn.addEventListener("click", function () {
   getData("europe", "confirmed");
-  confirmedBtn.classList.toggle("active");
+
+  deathBtn.addEventListener("click", function () {
+    getData("europe", "deaths");
+  });
+  recoveredBtn.addEventListener("click", function () {
+    getData("europe", "recovered");
+  });
+
+  criticalBtn.addEventListener("click", function () {
+    getData("europe", "critical");
+  });
 });
+
 africaBtn.addEventListener("click", function () {
   getData("africa", "confirmed");
-  confirmedBtn.classList.toggle("active");
+
+  deathBtn.addEventListener("click", function () {
+    getData("africa", "deaths");
+  });
+  recoveredBtn.addEventListener("click", function () {
+    getData("africa", "recovered");
+  });
+
+  criticalBtn.addEventListener("click", function () {
+    getData("africa", "critical");
+  });
 });
 americasBtn.addEventListener("click", function () {
   getData("americas", "confirmed");
-  confirmedBtn.classList.toggle("active");
+
+  deathBtn.addEventListener("click", function () {
+    getData("americas", "deaths");
+  });
+  recoveredBtn.addEventListener("click", function () {
+    getData("americas", "recovered");
+  });
+
+  criticalBtn.addEventListener("click", function () {
+    getData("americas", "critical");
+  });
 });
